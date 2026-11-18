@@ -52,16 +52,6 @@
   --glass-border-hover: rgba(16, 185, 129, 0.45);
 }
 
-/* Royal Violet Theme */
-[data-theme="violet"] {
-  --primary: #a855f7;
-  --primary-light: #c084fc;
-  --primary-dark: #7e22ce;
-  --primary-glow: rgba(168, 85, 247, 0.4);
-  --primary-subtle: rgba(168, 85, 247, 0.12);
-  --glass-border-hover: rgba(168, 85, 247, 0.45);
-}
-
 /* Reset & Base Setup */
 *,
 *::before,
@@ -222,6 +212,10 @@ button {
   color: var(--text-muted);
 }
 
+main p:not(.section-subtitle) {
+  text-align: justify;
+}
+
 /* Glass Card Style */
 .glass-card {
   background: var(--bg-card);
@@ -298,6 +292,16 @@ button {
 .btn-sm {
   padding: 7px 16px;
   font-size: 0.85rem;
+}
+
+.btn-arrow {
+  display: inline-block;
+  flex: 0 0 auto;
+  transition: transform var(--transition-fast);
+}
+
+.btn:hover .btn-arrow {
+  transform: translateX(3px);
 }
 
 /* ==========================================================================
@@ -465,11 +469,6 @@ nav {
 .theme-dot.emerald {
   background: #10b981;
   box-shadow: 0 0 8px rgba(16, 185, 129, 0.6);
-}
-
-.theme-dot.violet {
-  background: #a855f7;
-  box-shadow: 0 0 8px rgba(168, 85, 247, 0.6);
 }
 
 .menu-toggle {
@@ -1991,6 +1990,10 @@ nav {
   gap: 40px;
 }
 
+.contact-grid > * {
+  min-width: 0;
+}
+
 .contact-info-panel {
   display: flex;
   flex-direction: column;
@@ -2026,7 +2029,7 @@ nav {
 
 .social-links-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
   gap: 12px;
   margin-top: 10px;
 }
@@ -2043,6 +2046,14 @@ nav {
   font-size: 0.85rem;
   font-weight: 600;
   transition: var(--transition-fast);
+}
+
+.social-btn svg {
+  flex: 0 0 18px;
+}
+
+.social-btn-facebook svg {
+  color: #1877f2;
 }
 
 .social-btn:hover {
@@ -2774,6 +2785,18 @@ footer {
     padding: 18px;
   }
 
+  .quick-email-box {
+    flex-wrap: wrap;
+  }
+
+  .quick-email-box > div {
+    min-width: 0;
+  }
+
+  .email-display {
+    overflow-wrap: anywhere;
+  }
+
   .social-links-grid {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
@@ -3115,4 +3138,3 @@ footer {
   max-height: 88vh;
   overflow-y: auto;
 }
-

@@ -81,7 +81,6 @@
           <div class="theme-dot cyan" data-color="cyan" onclick="switchTheme('cyan')" title="Cyber Cyan"></div>
           <div class="theme-dot emerald" data-color="emerald" onclick="switchTheme('emerald')" title="Emerald Neon">
           </div>
-          <div class="theme-dot violet" data-color="violet" onclick="switchTheme('violet')" title="Royal Violet"></div>
         </div>
 
         <!-- Sound FX Mute/Unmute Toggle -->
@@ -113,7 +112,6 @@
           <div class="theme-dot amber active" data-color="amber" onclick="switchTheme('amber')"></div>
           <div class="theme-dot cyan" data-color="cyan" onclick="switchTheme('cyan')"></div>
           <div class="theme-dot emerald" data-color="emerald" onclick="switchTheme('emerald')"></div>
-          <div class="theme-dot violet" data-color="violet" onclick="switchTheme('violet')"></div>
         </div>
       </div>
     </div>
@@ -159,6 +157,7 @@
             <div class="hero-btns">
               <a href="#projects" class="btn btn-primary" onclick="playBeep()">
                 <span>Explore Projects</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
               </a>
               <a href="assets/Jhon_Mark_Ambito_Resume.pdf" download="Jhon_Mark_Ambito_Resume.pdf" class="btn btn-secondary">
                 <span>📄 Download Resume</span>
@@ -998,6 +997,15 @@
                 FIND ME ONLINE
               </div>
               <div class="social-links-grid">
+                <a href="https://www.facebook.com/jhonmark.ambito.1/" target="_blank" rel="noopener"
+                  class="social-btn social-btn-facebook" title="Facebook">
+                  <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+                    <path
+                      d="M24 12.073C24 5.405 18.627 0 12 0S0 5.405 0 12.073C0 18.1 4.388 23.094 10.125 24v-8.437H7.078v-3.49h3.047V9.413c0-3.025 1.792-4.699 4.533-4.699 1.312 0 2.686.236 2.686.236v2.97h-1.513c-1.49 0-1.956.931-1.956 1.886v2.267h3.328l-.532 3.49h-2.796V24C19.612 23.094 24 18.1 24 12.073Z" />
+                  </svg>
+                  <span>Facebook</span>
+                </a>
+
                 <a href="https://github.com/Jhonmarkambito" target="_blank" rel="noopener" class="social-btn"
                   title="GitHub">
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
@@ -1053,7 +1061,7 @@
 
               <button type="submit" class="btn btn-primary" style="width:100%;">
                 <span>Send Message</span>
-                <span>→</span>
+                <span class="btn-arrow" aria-hidden="true">→</span>
               </button>
               <div id="formStatusBox" class="form-status-box" style="display:none;"></div>
             </form>

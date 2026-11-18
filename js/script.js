@@ -4,8 +4,7 @@
 const themePalettes = {
   amber:   { particle: '255, 170, 92', line: '255, 122, 26' },
   cyan:    { particle: '103, 232, 249', line: '0, 216, 246' },
-  emerald: { particle: '52, 211, 153', line: '16, 185, 129' },
-  violet:  { particle: '192, 132, 252', line: '168, 85, 247' }
+  emerald: { particle: '52, 211, 153', line: '16, 185, 129' }
 };
 
 let currentThemePalette = themePalettes.amber;
@@ -26,11 +25,13 @@ function switchTheme(themeName) {
 }
 
 // Load saved theme on boot
-const savedTheme = localStorage.getItem('portfolio-theme') || 'amber';
-if (themePalettes[savedTheme]) {
-  document.documentElement.setAttribute('data-theme', savedTheme);
-  currentThemePalette = themePalettes[savedTheme];
+const storedTheme = localStorage.getItem('portfolio-theme') || 'amber';
+const savedTheme = themePalettes[storedTheme] ? storedTheme : 'amber';
+if (storedTheme !== savedTheme) {
+  localStorage.setItem('portfolio-theme', savedTheme);
 }
+document.documentElement.setAttribute('data-theme', savedTheme);
+currentThemePalette = themePalettes[savedTheme];
 document.querySelectorAll('.theme-dot').forEach(dot => {
   dot.classList.toggle('active', dot.getAttribute('data-color') === savedTheme);
 });
@@ -509,7 +510,7 @@ Available Commands:
   • resume            - Open my interactive Resume / CV summary modal
   • certs             - List my completed certifications
   • whoami            - Display developer profile info
-  • theme <color>     - Switch theme live (amber, cyan, emerald, violet)
+  • theme <color>     - Switch theme live (amber, cyan, emerald)
   • matrix            - Run animated full-screen green cyber matrix rain
   • contact           - View direct contact info and email
   • clear             - Clean terminal screen history
@@ -561,11 +562,11 @@ Status: Open for OJT / Internship & Junior Developer roles
       break;
 
     case 'theme':
-      if (['amber', 'cyan', 'emerald', 'violet'].includes(arg)) {
+      if (['amber', 'cyan', 'emerald'].includes(arg)) {
         switchTheme(arg);
         printTermLine(cleanCmd, `Theme accent switched live to: ${arg.toUpperCase()}!`, 'success');
       } else {
-        printTermLine(cleanCmd, `Invalid theme '${arg || ''}'. Options: amber, cyan, emerald, violet`, 'error');
+        printTermLine(cleanCmd, `Invalid theme '${arg || ''}'. Options: amber, cyan, emerald`, 'error');
       }
       break;
 
