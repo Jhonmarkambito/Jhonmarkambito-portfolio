@@ -294,16 +294,6 @@ main p:not(.section-subtitle) {
   font-size: 0.85rem;
 }
 
-.btn-arrow {
-  display: inline-block;
-  flex: 0 0 auto;
-  transition: transform var(--transition-fast);
-}
-
-.btn:hover .btn-arrow {
-  transform: translateX(3px);
-}
-
 /* ==========================================================================
    NAVIGATION BAR
    ========================================================================== */
@@ -2050,10 +2040,6 @@ nav {
 
 .social-btn svg {
   flex: 0 0 18px;
-}
-
-.social-btn-facebook svg {
-  color: #1877f2;
 }
 
 .social-btn:hover {
