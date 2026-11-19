@@ -376,10 +376,10 @@ nav {
 }
 
 .nav-links a {
-  font-size: clamp(0.78rem, 0.72vw, 0.86rem);
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-muted);
-  padding: 8px clamp(5px, 0.6vw, 8px);
+  padding: 8px clamp(7px, 0.65vw, 10px);
   border-radius: var(--radius-full);
   transition: var(--transition-fast);
   position: relative;
