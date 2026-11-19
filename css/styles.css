@@ -316,6 +316,7 @@ nav {
   border-radius: var(--radius-full);
   padding: 10px 20px;
   display: flex;
+  gap: 12px;
   justify-content: space-between;
   align-items: center;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
@@ -330,6 +331,7 @@ nav {
   font-size: 1.25rem;
   color: var(--text-main);
   letter-spacing: -0.02em;
+  flex-shrink: 0;
 }
 
 .logo-badge {
@@ -365,19 +367,23 @@ nav {
 
 .nav-links {
   display: flex;
+  flex: 1 1 auto;
   align-items: center;
-  gap: 4px;
+  justify-content: center;
+  gap: 0;
   list-style: none;
+  min-width: 0;
 }
 
 .nav-links a {
-  font-size: 0.9rem;
+  font-size: clamp(0.78rem, 0.72vw, 0.86rem);
   font-weight: 500;
   color: var(--text-muted);
-  padding: 8px 16px;
+  padding: 8px clamp(5px, 0.6vw, 8px);
   border-radius: var(--radius-full);
   transition: var(--transition-fast);
   position: relative;
+  white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -394,7 +400,8 @@ nav {
 .nav-actions {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 8px;
+  flex-shrink: 0;
 }
 
 /* Sound Toggle & Theme Picker */
@@ -2462,7 +2469,7 @@ footer {
 /* ==========================================================================
    RESPONSIVE DESIGN
    ========================================================================== */
-@media (max-width: 1100px) {
+@media (max-width: 1200px) {
   .nav-links {
     display: none;
   }
