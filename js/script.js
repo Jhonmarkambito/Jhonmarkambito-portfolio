@@ -157,6 +157,20 @@ function openResumeModal() {
       </div>
 
       <div style="margin-bottom:18px;">
+          <h4 style="font-size:0.82rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--primary); margin-bottom:8px;">Work Experience</h4>
+        <p style="font-size:0.9rem; color:var(--text-main);"><strong>Part-time Cashier, PCH Hardware</strong> <span style="color:var(--text-muted);">— About 3 years</span></p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:6px; font-size:0.88rem; color:#cbd5e1; margin-top:6px;">
+          <li>Processed customer payments and daily cash transactions accurately.</li>
+          <li>Helped customers with product questions and balanced work shifts with university studies.</li>
+        </ul>
+        <p style="font-size:0.9rem; color:var(--text-main); margin-top:10px;"><strong>Freelance Video Editor &amp; AI Video Creator</strong> <span style="color:var(--text-muted);">— Self-employed</span></p>
+        <ul style="list-style:none; display:flex; flex-direction:column; gap:6px; font-size:0.88rem; color:#cbd5e1; margin-top:6px;">
+          <li>Edited videos and produced AI-generated videos for clients.</li>
+          <li>Delivered client projects to requirements and deadlines, and taught clients to use AI tools in their work.</li>
+        </ul>
+      </div>
+
+      <div style="margin-bottom:18px;">
         <h4 style="font-size:0.82rem; text-transform:uppercase; letter-spacing:0.06em; color:var(--primary); margin-bottom:8px;">Selected Technical Projects</h4>
         <ul style="list-style:none; display:flex; flex-direction:column; gap:8px; font-size:0.88rem; color:#cbd5e1;">
           <li><strong style="color:var(--text-main);">BUKSU AI-Powered Student Assistance Chatbot:</strong> Designed and trained a RASA &amp; NLP conversational agent to automate university inquiry handling; authored capstone research manuscript.</li>
@@ -180,9 +194,8 @@ function openResumeModal() {
           <span class="tech-pill">ReactJS</span>
           <span class="tech-pill">JavaScript (ES6+)</span>
           <span class="tech-pill">TypeScript</span>
-          <span class="tech-pill">Node.js</span>
-          <span class="tech-pill">Laravel Blade / PHP</span>
-          <span class="tech-pill">MongoDB &amp; SQL</span>
+          <span class="tech-pill">HTML &amp; CSS</span>
+          <span class="tech-pill">PostgreSQL</span>
           <span class="tech-pill">RASA &amp; NLP</span>
           <span class="tech-pill">Cisco CCNA</span>
           <span class="tech-pill">Git &amp; GitHub</span>
