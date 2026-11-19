@@ -376,7 +376,7 @@ nav {
 }
 
 .nav-links a {
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   font-weight: 500;
   color: var(--text-muted);
   padding: 8px clamp(7px, 0.65vw, 10px);
